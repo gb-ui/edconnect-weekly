@@ -53,84 +53,69 @@
 
 
 
- </div><br><br>
-
-            <h2>Project Gallery</h2>
-
-        <div class="container bg-light p-3">
-            <div class="form-inline">
-                <div class="form-group col-md-6">
-                    <label for="searchTerm"></label>
-                    <input type="text" name="searchTerm" class="form-control-lg form-control" placeholder=" Search project name, Authors, Abtract, Tags">
-
-                </div>
-        
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSeclection01">Search by:</label>
-                            </div>
-                        </div>        
-                    </div>    
-
-                </div>
-
-                    <div class="form-group">
-                        <select class="custom-select form-control form-control-lg" name="searchTerm">
-                            <option value="name">Name</option>
-                            <option value="abstract">Abstract</option>
-                            <option value="authors">Authors</option>
-                            <option value="tags">Tags</option>
-                        </select>
-    
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-primary mt-2">Submit</button>
+    <div class= "container">
+        <main>
+            <h4>
+                Project Gallery
+            </h4>
+            <div class= "container bg-light p-3">
+                <form name= "searchForm">
+                    <div class= "form-row">
+                        <div class= "form-group col-6">
+                            <input type="text" name="searchTerm" class= "form-control form-control-lg" placeholder="Project name, Authors, Abstract, Tags">
+                        </div>
+                        <div class= "form-group col-2">
+                            <form-label for="searchType" class="form-control form-control-lg">Search By</form-label>
+                        </div>
+                        <div class= "form-group col-2">
+                            <select name="searchType" class= "form-control form-control-lg" id="searchType">
+                                <option value="Name">Name</option>
+                                <option value="Abstract">Abstract</option>
+                                <option value="Authors">Authors</option>
+                                <option value="Tags">Tags</option>
+                            </select>
+                        </div>
+                        <div class= "form-group col-2">
+                            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                         </div>
                     </div>
-
-
+                </form>
+            </div></br>
+                <div><strong class="h5">All Project</strong> (0 Result)</div></br>
+                <div class= "container">
+        <main>
+            <div class= "row">
+                <div class= "col">
+                    <div class= "card">
+                        <div class= "card-body">
+                            <h3 class= "card-title">Project 1</h3>
+                            <h5 class= "card-subtitle">Author 1, Author 2</h5>
+                            <p class="card-text">some quick example text to build on the card title and make up the bulk of the card content.</p>
+                            <div class= "container text-primary">#html #css #javascript</div>
+                        </div>
+                    </div>
                 </div>
-
+                <div class= "col">
+                    <div class= "card">
+                        <div class= "card-body">
+                            <h3 class= "card-title">Project 2</h3>
+                            <h5 class= "card-subtitle">Author 1, Author 2</h5>
+                            <p class="card-text">some quick example text to build on the card title and make up the bulk of the card content.</p>
+                            <div class= "container text-primary">#html #css #javascript</div>
+                        </div>
+                    </div>
+                </div>
+                <div class= "col">
+                    <div class= "card">
+                        <div class= "card-body">
+                            <h3 class= "card-title">Project 3</h3>
+                            <h5 class= "card-subtitle">Author 1, Author 2</h5>
+                            <p class="card-text">some quick example text to build on the card title and make up the bulk of the card content.</p>
+                            <div class= "container text-primary">#html #css #javascript</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </div><br><br>  
-        
-        <h3 class="container">All projects</h3>
-        <hr>
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <h5 class="card-title">Project Title</h5>
-                            <h6 class="card-subtitle">Author 1, Author 2</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link" >#html #css #javascript</a>
-    
-                        </div>
-    
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body text-left">
-                            <h5 class="card-title">Project Title</h5>
-                            <h6 class="card-subtitle">Author 1, Author 2</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link" >#html #css #javascript</a>
-    
-                        </div>
-    
-                    </div>
-                </div> 
-            </div>   
-            
-        </div>    
-
         <footer>
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
