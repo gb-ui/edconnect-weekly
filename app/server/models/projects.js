@@ -13,20 +13,26 @@ class Project {
 
 class Projects extends DataModel {
     validate(obj) {
- 
-        let sta1 = true;
-        for (const item in obj) {
-            if (!obj[item] || obj[item] === null) {
-                sta1 = false;
+        // this.errors.splice(0, this.errors.length)
+        this.errors = []
+        for (const property in obj) {
+            if (["authors", "tags"].includes(property)) {
+                if (!Array.isArray(obj[property])) {
+                    this.errors.push(`${property} should be an array`)
+                }
+            } else {
+                if (obj[property] === "") {
+                    this.errors.push(`${property} should not be empty`)
+                }
             }
         }
-        let arrayAuthors = Array.isArray(obj.authors);
-        let arrayTags = Array.isArray(obj.tags);
-        if (arrayAuthors && arrayTags && sta1) {
-            return true
+
+        if (this.errors.length > 0) {
+            return false;
+        } else {
+            return true;
         }
-        return false;
-}
+    }
 }
 
 

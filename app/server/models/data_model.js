@@ -1,6 +1,7 @@
 class DataModel {
     constructor() {
         this.data = [];
+        this.errors = [];
     }
 
     getAll() {
@@ -8,11 +9,13 @@ class DataModel {
     }
 
     getById(id) {
-        let user = this.data.find(obj => {
-            return obj.id === id;
-        });
-
-        return (user ? user : null);
+        let resultingObj = null;
+        this.data.forEach(obj => {
+            if (obj.id === id) {
+                resultingObj = obj;
+            }
+        })
+        return resultingObj;
     }
 
     save(obj) {
@@ -24,26 +27,40 @@ class DataModel {
     }
 
     update(obj, id) {
-        let user = this.data.find(item => item.id === id);
-        if (user) {
-            for (const item in obj) {
-                user[item] = obj[item];
-            }
-            return true;
-        }
-        return false;
+        let response = false;
+        this.data.forEach(property => {
+            if (property.id === id) {
+                // user.id = obj;
+                if (obj.hasOwnProperty("name") || obj.hasOwnProperty("abstract") || obj.hasOwnProperty("authors") || obj.hasOwnProperty("tags") || obj.hasOwnProperty("createdBy")) {
+                    property.name = obj.name;
+                    property.abstract = obj.abstract;
+                    property.authors = obj.authors;
+                    property.tags = obj.tags;
+                    property.createdBy = obj.createdBy;
+                }
 
+                property.firstname = obj.firstname;
+                property.lastname = obj.lastname;
+                property.email = obj.email;
+                property.password = obj.password;
+                property.matricNumber = obj.matricNumber;
+                property.program = obj.program;
+                property.graduationYear = obj.graduationYear;
+                response = true;
+            }
+        })
+        return response;
     }
 
     delete(id) {
-        let user = this.data.find(item => item.id === id);
-
-        let index = this.data.indexOf(user);
-        if (user) {
-            this.data.splice(index, 1);
-            return true;
+        let response = false;
+        for (let Obj of this.data) {
+            if (Obj.id == id) {
+                this.data.splice(this.data.indexOf(Obj), 1)
+                response = true;
+            }
         }
-        return false;
+        return response;
     }
 
     // this method will be overriden in the sub classes
