@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Search | Project Explorer</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-md">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="h3">Project Explorer</h1>
+        </a>
+
+        <form name="searchForm" class="form-inline">
+            <input type="text" placeholder="Search Projects" class="form-control">
+            <button class="btn btn-outline-light mx-2">Search</button>
+        </form>
+
+        <a href="#" class="text-white mx-1 text-decoration-none">Submit</a>
+
+        <ul class="navbar-nav ml-md-auto" id="logged-out">
+            <li class="nav-item"><a href="register.html" class="nav-link text-white">Sign Up</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link text-white">Login</a></li>
+        </ul>
+
+        <ul class="navbar-nav ml-md-auto d-none" id="logged-in">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" id="logout">Logout</a>
+            </li>
+            <li class="nav-item"><a href="login.html" class="nav-link text-white" id="username"></a></li>
+        </ul>
+    </nav>
+
+    <!-- ! Main Division -->
+    <main>
+        <!-- ! Search Form -->
+        <div class="container my-4">
+            <h3 class="mt-4">Project Gallery</h3>
+            <section class="bg-light p-3">
+                <form name="searchForm" class="form-inline">
+                    <input type="text" name="searchTerm" placeholder="Project Name, Authors, Abstract, Tags" class="form-control-lg form-control mr-sm-2 col-sm-8">
+
+                    <label for="searchType" class="input-group-prepend my-2 my-lg-0">
+                        <span class="input-group-text py-md-2">Search By:</span>
+                    </label>
+                    <select name="searchType" class="form-control-lg form-control my-2 my-lg-0">
+                        <option value="Name">Name</option>
+                        <option value="Abstract">Abstract</option>
+                        <option value="Authors">Authors</option>
+                        <option value="Tags">Tags</option>
+                    </select>
+
+                    <button class="btn btn-lg btn-primary mx-sm-2" type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- ! Search Results -->
+        <section class="container">
+            <div class="d-flex">
+                <h5>All Projects</h5>
+                <p class="ml-1">(0 results)</p>
+            </div>
+            <!-- ! Project Cards -->
+            <div class="container d-md-flex">
+                <section class="card p-3 my-1 mx-md-1 col-md-4">
+                    <h4 class="text-primary card-title">Project Title</h4>
+                    <h6>Author 1, Author 2</h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <ul class="d-flex d-sm-block d-lg-flex list-unstyled justify-content-between">
+                        <li class="text-primary">#HTML</li>
+                        <li class="text-primary">#CSS</li>
+                        <li class="text-primary">#Javascript</li>
+                    </ul>
+                </section>
+
+                <section class="card p-3 my-1 mx-md-1 col-md-4">
+                    <h4 class="text-primary card-title">Project Title</h4>
+                    <h6>Author 1, Author 2</h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <ul class="d-flex d-sm-block d-lg-flex list-unstyled justify-content-between">
+                        <li class="text-primary">#HTML</li>
+                        <li class="text-primary">#CSS</li>
+                        <li class="text-primary">#Javascript</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- ! Footer -->
+    <footer class="container my-4">
+        <section class="bg-light">
+            <p class="lead text-secondary text-right py-2 px-3">Project Explorer &copy; 2020. <b>Edconnect</b></p>
+        </section>
+    </footer>
+
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>

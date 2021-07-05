@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Profile | Project Explorer</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-md">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="h3">Project Explorer</h1>
+        </a>
+
+        <form name="searchForm" class="form-inline">
+            <input type="text" placeholder="Search Projects" class="form-control">
+            <button class="btn btn-outline-light mx-2">Search</button>
+        </form>
+
+        <a href="#" class="text-white mx-1 text-decoration-none">Submit</a>
+
+        <ul class="navbar-nav ml-md-auto" id="logged-out">
+            <li class="nav-item"><a href="register.html" class="nav-link text-white">Sign Up</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link text-white">Login</a></li>
+        </ul>
+
+        <ul class="navbar-nav ml-md-auto d-none" id="logged-in">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" id="logout">Logout</a>
+            </li>
+            <li class="nav-item"><a href="login.html" class="nav-link text-white" id="username"></a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ! Main Division -->
+    <main>
+
+        <!-- ! Profile Summary -->
+        <section class="container my-5">
+            <div class="d-sm-flex">
+                <h4>John Doe</h4>
+                <p class="mx-2 align-self-center my-0">Johndoe@gmail.com</p>
+            </div>
+
+            <ul class="bg-light row py-2">
+                <div class="col">
+                    <li class="list-unstyled">Program</li>
+                    <li class="list-unstyled">Computer Science</li>
+                </div>
+
+                <div class="col">
+                    <li class="list-unstyled">Matric Number</li>
+                    <li class="list-unstyled">00/0000</li>
+                </div>
+
+                <div class="col">
+                    <li class="list-unstyled">Graduation Year</li>
+                    <li class="list-unstyled">2019</li>
+                </div>
+            </ul>
+        </section>
+
+        <!-- ! Update Profile -->
+        <section class="container">
+            <h5 class="pb-3 mb-3 border-bottom">Update Profile</h5>
+
+            <form name="updateProfile">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="firstName" class="col-form-label">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="lastName" class="col-form-label">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="email" class="col-form-label">Email Address:</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="program" class="col-form-label">Program</label>
+                        <select name="program" id="program" class="form-control">
+                            <option selected>Choose...</option>
+                            <option value="computer_science">Computer Science</option>
+                            <option value="computer_information_systems">Computer Information Systems</option>
+                            <option value="computer_technology">Computer Technology</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="matricNumber" class="col-form-label">Matric Number:</label>
+                        <input type="text" name="matricNumber" id="matricNumber" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="graduationYear" class="col-form-label">Graduation Year:</label>
+                        <select name="graduationYear" id="graduationYear" class="form-control">
+                            <option selected>Choose...</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Update Profile</button>
+            </form>
+        </section>
+
+        <!-- ! Change Password -->
+        <section class="container">
+            <h5 class="py-3 mb-3 border-bottom">Change Password</h5>
+            <form name="changePassword">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="currentPassword" class="col-form-label">Current Password:</label>
+                        <input type="password" name="currentPassword" id="currentPassword" placeholder="Current Password" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="newPassword" class="col-form-label">New Password:</label>
+                        <input type="password" name="newPassword" id="newPassword" placeholder="Your New Password" class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label for="confirmPassword" class="col-form-label">Confirm Password:</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm New Password" class="form-control">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Change Password</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ! Footer -->
+    <footer class="container my-4">
+        <section class="bg-light">
+            <p class="lead text-secondary text-right py-2 px-3">Project Explorer &copy; 2020. <b>Edconnect</b></p>
+        </section>
+    </footer>
+
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>

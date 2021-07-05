@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>View Project | Project Explorer</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-md">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="h3">Project Explorer</h1>
+        </a>
+
+        <form name="searchForm" class="form-inline">
+            <input type="text" placeholder="Search Projects" class="form-control">
+            <button class="btn btn-outline-light mx-2">Search</button>
+        </form>
+
+        <a href="#" class="text-white mx-1 text-decoration-none">Submit</a>
+
+        <ul class="navbar-nav ml-md-auto" id="logged-out">
+            <li class="nav-item"><a href="register.html" class="nav-link text-white">Sign Up</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link text-white">Login</a></li>
+        </ul>
+
+        <ul class="navbar-nav ml-md-auto d-none" id="logged-in">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" id="logout">Logout</a>
+            </li>
+            <li class="nav-item"><a href="login.html" class="nav-link text-white" id="username"></a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ! Main Division -->
+    <main class="container py-5">
+        <!-- ! Project Summary -->
+        <section>
+            <h4 id="project_name"></h4>
+
+            <div class="row bg-light p-3 ">
+                <section class="col">
+                    <ul>
+                        <li class="list-unstyled">Created By</li>
+                        <li class="list-unstyled" id="project_author"></li>
+                    </ul>
+                </section>
+                <section class="col">
+                    <li class="list-unstyled">Date Created</li>
+                    <li class="list-unstyled">2019-04-23</li>
+                </section>
+                <section class="col">
+                    <li class="list-unstyled">Last Updated</li>
+                    <li class="list-unstyled">2019-04-23</li>
+                </section>
+                <section class="col-auto">
+                    <a href="editproject.html" role="button" class="btn btn-primary">Edit Project</a>
+                </section>
+            </div>
+        </section>
+
+        <section class="row my-4">
+            <!-- ! Project Abstract -->
+            <div class="col">
+                <h5 class="py-3 border-bottom">Project Abstract</h5>
+                <p id="project_abstract"></p>
+
+                <h5 class="py-3">Comments</h5>
+                <form>
+                    <textarea rows="3" placeholder="Leave a comment" class="form-control"></textarea>
+                    <button type="submit" class="btn btn-primary my-2">Submit</button>
+                </form>
+                <p class="py-3 mt-3 border-top text-center">No comments added yet</p>
+            </div>
+
+            <div class="col">
+                <!-- ! Project Details -->
+                <section>
+                    <h5 class="py-3 border-bottom">Project Details</h5>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Author(s)</strong>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush" id="project_authors"></ul>
+                        </div>
+                        <div class="card-footer" id="project_tags"></div>
+                    </div>
+
+                    <div class="card my-2">
+                        <div class="card-header">
+                            <h5>Project Files</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-center">No file uploaded yet</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- ! Footer -->
+    <footer class="container my-4">
+        <section class="bg-light">
+            <p class="lead text-secondary text-right py-2 px-3">Project Explorer &copy; 2020. <b>Edconnect</b></p>
+        </section>
+    </footer>
+
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
